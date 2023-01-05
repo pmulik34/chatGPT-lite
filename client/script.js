@@ -23,4 +23,23 @@ function loader(element){
   },300)
 }
 
+function textType(element, text){
+  // Set up an interval to run every 20 milliseconds
+  let index = 0;
+  let interval = setInterval(()=>{
+    // If the index is less than the length of the text
+    if(index < text.lenght){
+      // Add the character at the current index of the text to the innerHTML of the element
+      element.innerHT += text.chartAt(index);
+      // Increment the index by 1
+      index++;
+    }else{
+      // If the index is not less than the length of the text, clear the interval
+      clearInterval(interval);
+    }
+  },20);
+}
+
+
+
 
